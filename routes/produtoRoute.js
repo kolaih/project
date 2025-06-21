@@ -49,7 +49,7 @@ router.get('/buscar/:termo', async (req, res) => {
   }
 });
 
-router.delete('/produto/:_id', async (req, res) => {
+router.delete('/:_id', async (req, res) => {
   try {
     const { _id } = req.params;
     const produto = await Produto.findByIdAndDelete(_id);
@@ -64,7 +64,7 @@ router.delete('/produto/:_id', async (req, res) => {
   }
 })
 
-router.put('/produto/:_id', async (req, res) => {
+router.put('/:_id', async (req, res) => {
   try {
     const { _id } = req.params;
     const dadosAtualizados = req.body;
